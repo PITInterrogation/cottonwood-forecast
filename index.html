@@ -93,7 +93,7 @@ tr:hover td{background:rgba(41,182,246,.04)}
   <div class="ri">
     <span>Forecast: Wednesday, February 18, 2026</span>
     <span>Temp: Feb 15 &ndash; Feb 25, 2026</span>
-    <span>Flow: Feb 11 &ndash; Feb 25 (obs + predicted)</span>
+    <span>Flow: Feb 11 &ndash; Feb 22 (obs + predicted)</span>
   </div>
 </div></div>
 
@@ -109,10 +109,10 @@ tr:hover td{background:rgba(41,182,246,.04)}
 <!-- WATER TEMP CHART -->
 <div class="cd">
   <h3>Water Temperature &mdash; 3-Day Observed + 7-Day Forecast</h3>
-  <div class="lg">
-    <div class="lgi"><div class="ll" style="background:#66bb6a"></div> Observed</div>
-    <div class="lgi"><div class="ll" style="background:#29b6f6"></div> Predicted Mouth</div>
-    <div class="lgi"><div class="ld" style="border-color:#b39ddb"></div> Predicted Upstream</div>
+  <div class="lg" style="font-size:.85rem;gap:1.5rem;margin-bottom:.7rem">
+    <div class="lgi"><div class="ll" style="background:#66bb6a;width:24px;height:4px"></div> <strong style="color:#66bb6a">Observed</strong></div>
+    <div class="lgi"><div class="ll" style="background:#29b6f6;width:24px;height:4px"></div> <strong style="color:#29b6f6">Predicted Mouth</strong></div>
+    <div class="lgi"><div class="ld" style="border-color:#b39ddb;width:24px;border-top-width:3px"></div> <strong style="color:#b39ddb">Predicted Upstream</strong></div>
     <div class="lgi"><div class="ll" style="background:rgba(239,83,80,.4);height:1px"></div> Alert 23.0&deg;C</div>
   </div>
   <div class="cls">
@@ -127,12 +127,10 @@ tr:hover td{background:rgba(41,182,246,.04)}
 
 <!-- FLOW CHART (full width) -->
 <div class="cd">
-  <h3>Discharge (cfs) &amp; Gage Height (ft) &mdash; 7-Day Observed + 7-Day Predicted</h3>
+  <h3>Discharge (cfs) &amp; Gage Height (ft) &mdash; 7-Day Observed + 4-Day Predicted</h3>
   <div class="lg">
-    <div class="lgi"><div class="ll" style="background:#29b6f6"></div> Observed Flow (cfs)</div>
-    <div class="lgi"><div class="ld" style="border-color:#81d4fa"></div> Predicted Flow (cfs)</div>
-    <div class="lgi"><div class="ll" style="background:#b39ddb"></div> Observed Gage (ft)</div>
-    <div class="lgi"><div class="ld" style="border-color:#ce93d8"></div> Predicted Gage (ft)</div>
+    <div class="lgi"><div class="ll" style="background:#29b6f6"></div> Observed Flow</div>
+    <div class="lgi"><div class="ld" style="border-color:#81d4fa"></div> Predicted Flow</div>
   </div>
   <div class="model-note">Predicted flow uses the trained Random Forest model driven by weather forecast and SNOTEL data from Starr Ridge.</div>
   <div class="cw"><canvas id="flowChart" height="180"></canvas></div>
@@ -148,7 +146,7 @@ tr:hover td{background:rgba(41,182,246,.04)}
           <div class="wx-icon">&#x2601;</div>
           <div class="wx-cond">Cloudy</div>
           <div class="wx-temp">30&deg;F<span class="wx-c">-1&deg;C</span></div>
-          <div class="wx-det">RH 77% &middot; DP 23&deg;F</div>
+          <div class="wx-det">RH 75% &middot; DP 23&deg;F</div>
         </div>
         <div class="wx-card">
           <div class="wx-day">Thu</div>
@@ -246,13 +244,13 @@ tr:hover td{background:rgba(41,182,246,.04)}
         <tr class="today">
           <td class="tdate">Today</td>
           <td class="tsrc">Obs</td>
-          <td class="">38.2<span class="csub">3.5&deg;C</span></td>
+          <td class="">38.8<span class="csub">3.8&deg;C</span></td>
           <td class="">38.0<span class="csub">3.3&deg;C</span></td>
-          <td class="">35.4<span class="csub">1.9&deg;C</span></td>
-          <td>174.2</td>
+          <td class="">35.3<span class="csub">1.9&deg;C</span></td>
+          <td>174.3</td>
           <td>3.137</td>
-          <td>29.7</td>
-          <td>77</td>
+          <td>30.1</td>
+          <td>75</td>
         </tr>
         <tr class="forecast">
           <td class="tdate">Thu Feb 19</td>
@@ -347,15 +345,15 @@ const LB=['Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 
 const TI=DT.indexOf(TDY);
 const AC=23.0, AF=AC*9/5+32;
 
-const MF=[40.2420,39.1533,38.2604,38.0209,37.3278,37.6228,37.3422,38.3390,40.2237,39.7394,39.6002], MC=[4.5789,3.9740,3.4780,3.3449,2.9599,3.1238,2.9679,3.5216,4.5687,4.2996,4.2223];
-const UF=[38.8115,37.1984,35.5694,35.4124,34.6442,35.3982,34.7828,36.0267,38.4074,37.5645,37.0781], UC=[3.7842,2.8880,1.9830,1.8958,1.4690,1.8879,1.5460,2.2370,3.5596,3.0914,2.8212];
-const OF=[41.7313,40.4206,39.5769,38.2293,null,null,null,null,null,null,null],   OC=[5.4062,4.6781,4.2094,3.4607,null,null,null,null,null,null,null];
+const MF=[40.2420,39.1533,38.2604,38.0064,37.3344,37.6294,37.3488,38.3455,40.2303,39.7394,39.6002], MC=[4.5789,3.9740,3.4780,3.3369,2.9636,3.1275,2.9716,3.5253,4.5724,4.2996,4.2223];
+const UF=[38.8115,37.1984,35.5694,35.3471,34.6428,35.3968,34.7815,36.0253,38.4060,37.5645,37.0781], UC=[3.7842,2.8880,1.9830,1.8595,1.4682,1.8871,1.5453,2.2363,3.5589,3.0914,2.8212];
+const OF=[41.7313,40.4206,39.5769,38.7950,null,null,null,null,null,null,null],   OC=[5.4062,4.6781,4.2094,3.7750,null,null,null,null,null,null,null];
 
 /* Flow chart data */
-const FLB=['Wed Feb 11', 'Thu Feb 12', 'Fri Feb 13', 'Sat Feb 14', 'Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 'Sun Feb 22', 'Mon Feb 23', 'Tue Feb 24', 'Wed Feb 25'];
-const FDT=['2026-02-11', '2026-02-12', '2026-02-13', '2026-02-14', '2026-02-15', '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20', '2026-02-21', '2026-02-22', '2026-02-23', '2026-02-24', '2026-02-25'];
-const FOQ=[181.3358,175.7722,172.5472,171.8147,174.0179,175.2347,175.8159,174.2327,null,null,null,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,174.2327,176.4600,176.7900,176.8200,177.0900,177.0900,177.0900,177.0900];
-const FOG=[3.1871,3.1476,3.1244,3.1191,3.1350,3.1438,3.1479,3.1365,null,null,null,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1365,3.1525,3.1549,3.1551,3.1570,3.1570,3.1570,3.1570];
+const FLB=['Wed Feb 11', 'Thu Feb 12', 'Fri Feb 13', 'Sat Feb 14', 'Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 'Sun Feb 22'];
+const FDT=['2026-02-11', '2026-02-12', '2026-02-13', '2026-02-14', '2026-02-15', '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20', '2026-02-21', '2026-02-22'];
+const FOQ=[181.3358,175.7722,172.5472,171.8147,174.0179,175.2347,175.8159,174.3393,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,174.3393,176.4600,176.7900,176.8200,177.0900];
+const FOG=[3.1871,3.1476,3.1244,3.1191,3.1350,3.1438,3.1479,3.1373,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1373,3.1525,3.1549,3.1551,3.1570];
 const FTI=FDT.indexOf(TDY);
 
 const MCL=['#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7'], UCL=['#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7'], OCL=['#4fc3f7','#4fc3f7','#4fc3f7','#4fc3f7','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)','rgba(150,150,150,0.5)'];
@@ -522,7 +520,10 @@ new Chart(document.getElementById('tempChart'),{
   plugins:[ZONES],
 });
 
-/* ========== FLOW / GAGE (14-day: 7 obs + 7 pred) ========== */
+/* ========== FLOW / GAGE (7 obs + 4 pred) ========== */
+/* Stage-discharge conversion: Q = 10 * GH^2.5, so GH = (Q/10)^0.4 */
+const cfs2ft=q=>q>0?Math.pow(q/10,0.4):0;
+const ft2cfs=g=>g>0?10*Math.pow(g,2.5):0;
 new Chart(document.getElementById('flowChart'),{
   type:'line',
   data:{
@@ -536,7 +537,7 @@ new Chart(document.getElementById('flowChart'),{
         pointBackgroundColor:'#29b6f6',pointBorderWidth:2,
         tension:.25,fill:true,yAxisID:'yF',spanGaps:false,
         datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
+          display:c=>c.dataset.data[c.dataIndex]!==null&&c.dataIndex%2===0,
           formatter:v=>v!==null?v.toFixed(0)+' cfs':'',
           color:'#81d4fa',anchor:'end',align:'top',offset:4,
           font:{family:"'IBM Plex Mono'",size:9,weight:500},
@@ -550,38 +551,10 @@ new Chart(document.getElementById('flowChart'),{
         pointBackgroundColor:'#81d4fa',pointBorderWidth:2,pointStyle:'triangle',
         tension:.25,fill:true,yAxisID:'yF',spanGaps:false,
         datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
+          display:c=>c.dataset.data[c.dataIndex]!==null&&c.dataIndex%2===0,
           formatter:v=>v!==null?v.toFixed(0)+' cfs':'',
           color:'#b3e5fc',anchor:'end',align:'top',offset:4,
           font:{family:"'IBM Plex Mono'",size:9,weight:500,style:'italic'},
-        },
-      },
-      /* Observed gage height (solid) */
-      {
-        label:'Observed Gage (ft)',data:FOG,
-        borderColor:'#b39ddb',borderWidth:2,
-        pointRadius:4,pointHoverRadius:6,
-        pointBackgroundColor:'#b39ddb',pointBorderWidth:2,
-        tension:.25,fill:false,yAxisID:'yG',spanGaps:false,
-        datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
-          formatter:v=>v!==null?v.toFixed(2)+' ft':'',
-          color:'#ce93d8',anchor:'start',align:'bottom',offset:4,
-          font:{family:"'IBM Plex Mono'",size:9},
-        },
-      },
-      /* Predicted gage height (dashed) */
-      {
-        label:'Predicted Gage (ft)',data:FPG,
-        borderColor:'#ce93d8',borderDash:[5,3],borderWidth:2,
-        pointRadius:4,pointHoverRadius:6,
-        pointBackgroundColor:'#ce93d8',pointBorderWidth:2,pointStyle:'triangle',
-        tension:.25,fill:false,yAxisID:'yG',spanGaps:false,
-        datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
-          formatter:v=>v!==null?v.toFixed(2)+' ft':'',
-          color:'#e1bee7',anchor:'start',align:'bottom',offset:4,
-          font:{family:"'IBM Plex Mono'",size:9,style:'italic'},
         },
       },
     ],
@@ -590,12 +563,23 @@ new Chart(document.getElementById('flowChart'),{
     responsive:true,animation:{duration:500},
     layout:{padding:{top:28}},
     interaction:{mode:'index',intersect:false},
-    plugins:{legend:{display:false},tooltip:{...TT}},
+    plugins:{legend:{display:false},tooltip:{...TT,
+      callbacks:{
+        label:c=>{const q=c.parsed.y;const gh=cfs2ft(q);
+          return c.dataset.label+': '+q.toFixed(1)+' cfs ('+gh.toFixed(2)+' ft)'},
+      }
+    }},
     scales:{
       x:{...SD,ticks:{...SD.ticks,maxRotation:45}},
       yF:{...SD,position:'left',title:{display:true,text:'Flow (cfs)',color:'#607d96',font:CF}},
       yG:{...SD,position:'right',grid:{drawOnChartArea:false},
-        title:{display:true,text:'Gage Height (ft)',color:'#607d96',font:CF}},
+        title:{display:true,text:'Gage Height (ft)',color:'#607d96',font:CF},
+        afterBuildTicks(ax){
+          const yF=ax.chart.scales.yF;
+          if(yF){ax.min=cfs2ft(yF.min);ax.max=cfs2ft(yF.max)}
+        },
+        ticks:{...SD.ticks,callback:v=>v.toFixed(2)},
+      },
     },
   },
   plugins:[FLOW_TODAY],
