@@ -244,18 +244,18 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Today</td>
           <td class="tsrc">Obs</td>
           <td class="">34.3<span class="csub">1.3&deg;C</span></td>
-          <td class="">36.2<span class="csub">2.3&deg;C</span></td>
-          <td class="">33.2<span class="csub">0.7&deg;C</span></td>
-          <td>170.8</td>
+          <td class="">36.3<span class="csub">2.4&deg;C</span></td>
+          <td class="">33.3<span class="csub">0.7&deg;C</span></td>
+          <td>170.7</td>
           <td>3.111</td>
-          <td>29.6</td>
+          <td>29.9</td>
           <td>67</td>
         </tr>
         <tr class="forecast">
           <td class="tdate">Fri Feb 20</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">33.9<span class="csub">1.1&deg;C</span></td>
+          <td class="">33.9<span class="csub">1.0&deg;C</span></td>
           <td class="">32.0<span class="csub">0.0&deg;C</span></td>
           <td>165.3 <span class="flow-pred">Pred</span></td>
           <td>3.071 <span class="flow-pred">Pred</span></td>
@@ -277,8 +277,8 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Sun Feb 22</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">38.4<span class="csub">3.5&deg;C</span></td>
-          <td class="">36.0<span class="csub">2.2&deg;C</span></td>
+          <td class="">38.4<span class="csub">3.6&deg;C</span></td>
+          <td class="">36.1<span class="csub">2.3&deg;C</span></td>
           <td>163.2 <span class="flow-pred">Pred</span></td>
           <td>3.055 <span class="flow-pred">Pred</span></td>
           <td>40.5</td>
@@ -288,7 +288,7 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Mon Feb 23</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">40.6<span class="csub">4.8&deg;C</span></td>
+          <td class="">40.7<span class="csub">4.8&deg;C</span></td>
           <td class="">38.8<span class="csub">3.8&deg;C</span></td>
           <td>163.6 <span class="flow-pred">Pred</span></td>
           <td>3.059 <span class="flow-pred">Pred</span></td>
@@ -344,18 +344,19 @@ const LB=['Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 
 const TI=DT.indexOf(TDY);
 const AC=23.0, AF=AC*9/5+32;
 
-const MF=[40.0824,38.3118,37.1296,36.1949,33.9115,35.6537,38.3841,40.6439,39.8109,39.8298,40.4512], MC=[4.4902,3.5065,2.8498,2.3305,1.0620,2.0299,3.5467,4.8022,4.3394,4.3499,4.6951];
-const UF=[38.1276,35.6208,34.3507,33.2326,32.0000,33.1000,36.0491,38.8173,37.9783,37.4315,37.6360], UC=[3.4042,2.0116,1.3059,0.6848,0.0000,0.6111,2.2495,3.7874,3.3213,3.0175,3.1311];
-const OF=[40.4206,39.5769,38.3113,34.3100,null,null,null,null,null,null,null],   OC=[4.6781,4.2094,3.5063,1.2833,null,null,null,null,null,null,null];
+const MF=[40.0824,38.3118,37.1296,36.2722,33.8779,35.6680,38.3983,40.6582,39.8251,39.8298,40.4512], MC=[4.4902,3.5065,2.8498,2.3734,1.0433,2.0378,3.5546,4.8101,4.3473,4.3499,4.6951];
+const UF=[38.1276,35.6208,34.3507,33.3027,32.0000,33.1086,36.0577,38.8260,37.9870,37.4315,37.6360], UC=[3.4042,2.0116,1.3059,0.7237,0.0000,0.6159,2.2543,3.7922,3.3261,3.0175,3.1311];
+const OF=[40.4206,39.5769,38.3113,34.2528,null,null,null,null,null,null,null],   OC=[4.6781,4.2094,3.5063,1.2516,null,null,null,null,null,null,null];
 
 /* Flow chart data */
 const FLB=['Thu Feb 12', 'Fri Feb 13', 'Sat Feb 14', 'Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 'Sun Feb 22', 'Mon Feb 23'];
 const FDT=['2026-02-12', '2026-02-13', '2026-02-14', '2026-02-15', '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20', '2026-02-21', '2026-02-22', '2026-02-23'];
-const FOQ=[175.7722,172.5472,171.8147,174.0179,175.2347,175.8159,173.8011,170.7751,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,170.7751,165.2700,163.7200,163.1700,163.6400];
-const FOG=[3.1476,3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.1115,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1115,3.0710,3.0595,3.0553,3.0588];
+const FOQ=[175.7722,172.5472,171.8147,174.0179,175.2347,175.8159,173.8011,170.6765,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,170.6765,165.2700,163.7200,163.1700,163.6400];
+const FOG=[3.1476,3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.1108,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1108,3.0710,3.0595,3.0553,3.0588];
 const FTI=FDT.indexOf(TDY);
 
 const MCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], UCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], OCL=['#0369a1','#0369a1','#0369a1','#0369a1','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8'];
+const MFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], UFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], OFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)'];
 
 const CF={family:"'Source Sans 3'"};
 const MO={family:"'IBM Plex Mono'",size:10};
@@ -448,10 +449,10 @@ new Chart(document.getElementById('tempChart'),{
       {
         label:'Observed (\u00b0F)',data:OF,
         borderColor:'#2e8b3d',borderWidth:2.5,
-        pointRadius:6,pointHoverRadius:8,pointBackgroundColor:OCL,pointBorderColor:OCL,pointBorderWidth:2,
+        pointRadius:7,pointHoverRadius:9,pointBackgroundColor:OFL,pointBorderColor:OCL,pointBorderWidth:2,
         tension:.25,fill:false,spanGaps:false,
         datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
+          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;return(i%2===0);},
           formatter:(v,c)=>{const cv=OC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:'#15803d',anchor:'end',align:'top',offset:5,
           font:{family:"'IBM Plex Mono'",size:10,weight:500},
@@ -460,10 +461,10 @@ new Chart(document.getElementById('tempChart'),{
       {
         label:'Pred Mouth (\u00b0F)',data:MF,
         borderColor:'#1a73b5',borderWidth:2.5,
-        pointRadius:6,pointHoverRadius:8,pointBackgroundColor:MCL,pointBorderColor:MCL,pointBorderWidth:2,
+        pointRadius:7,pointHoverRadius:9,pointBackgroundColor:MFL,pointBorderColor:MCL,pointBorderWidth:2,
         tension:.25,fill:false,
         datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
+          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;if(TI>=0&&i<TI)return(i%2===1);return true;},
           formatter:(v,c)=>{const cv=MC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:c=>MCL[c.dataIndex],anchor:'end',align:'top',offset:5,
           font:{family:"'IBM Plex Mono'",size:10,weight:500},
@@ -472,10 +473,10 @@ new Chart(document.getElementById('tempChart'),{
       {
         label:'Pred Upstream (\u00b0F)',data:UF,
         borderColor:'#6d4c9e',borderDash:[6,3],borderWidth:2,
-        pointRadius:5,pointHoverRadius:7,pointBackgroundColor:UCL,pointBorderColor:UCL,pointBorderWidth:2,
+        pointRadius:6,pointHoverRadius:8,pointBackgroundColor:UFL,pointBorderColor:UCL,pointBorderWidth:2,
         tension:.25,fill:false,
         datalabels:{
-          display:c=>c.dataset.data[c.dataIndex]!==null,
+          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;if(TI>=0&&i<TI)return(i%2===1);return true;},
           formatter:(v,c)=>{const cv=UC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:c=>UCL[c.dataIndex],anchor:'start',align:'bottom',offset:5,
           font:{family:"'IBM Plex Mono'",size:9,weight:500},
@@ -501,7 +502,10 @@ new Chart(document.getElementById('tempChart'),{
       y:{...SD,position:'left',
         title:{display:true,text:'Temperature (\u00b0F)',color:'#6b7b8d',font:CF},
         afterDataLimits(ax){
-          const pad=(ax.max-ax.min)*0.15||5;
+          /* Always show at least up to 25C (77F) for consistent scale */
+          const minF25C=77;
+          if(ax.max<minF25C)ax.max=minF25C;
+          const pad=(ax.max-ax.min)*0.1||3;
           ax.min=ax.min-pad;ax.max=ax.max+pad;
         },
       },
