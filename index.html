@@ -144,8 +144,8 @@ tr:hover td{background:#f0f5fa}
           <div class="wx-date">Feb 20</div>
           <div class="wx-icon">&#x2601;</div>
           <div class="wx-cond">Cloudy</div>
-          <div class="wx-temp">29&deg;F<span class="wx-c">-2&deg;C</span></div>
-          <div class="wx-det">RH 81% &middot; DP 24&deg;F</div>
+          <div class="wx-temp">30&deg;F<span class="wx-c">-1&deg;C</span></div>
+          <div class="wx-det">RH 78% &middot; DP 24&deg;F</div>
         </div>
         <div class="wx-card">
           <div class="wx-day">Sat</div>
@@ -243,20 +243,20 @@ tr:hover td{background:#f0f5fa}
         <tr class="today">
           <td class="tdate">Today</td>
           <td class="tsrc">Obs</td>
-          <td class="">35.4<span class="csub">1.9&deg;C</span></td>
-          <td class="">34.7<span class="csub">1.5&deg;C</span></td>
-          <td class="">32.7<span class="csub">0.4&deg;C</span></td>
-          <td>11.4</td>
-          <td>3.153</td>
-          <td>28.8</td>
-          <td>81</td>
+          <td class="">35.7<span class="csub">2.0&deg;C</span></td>
+          <td class="">35.0<span class="csub">1.6&deg;C</span></td>
+          <td class="">32.8<span class="csub">0.4&deg;C</span></td>
+          <td>11.3</td>
+          <td>3.151</td>
+          <td>29.8</td>
+          <td>78</td>
         </tr>
         <tr class="forecast">
           <td class="tdate">Sat Feb 21</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">36.3<span class="csub">2.4&deg;C</span></td>
-          <td class="">33.9<span class="csub">1.0&deg;C</span></td>
+          <td class="">36.4<span class="csub">2.5&deg;C</span></td>
+          <td class="">34.0<span class="csub">1.1&deg;C</span></td>
           <td>11.0 <span class="flow-pred">Pred</span></td>
           <td>3.144 <span class="flow-pred">Pred</span></td>
           <td>34.6</td>
@@ -266,8 +266,8 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Sun Feb 22</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">39.0<span class="csub">3.9&deg;C</span></td>
-          <td class="">36.8<span class="csub">2.7&deg;C</span></td>
+          <td class="">39.1<span class="csub">3.9&deg;C</span></td>
+          <td class="">36.9<span class="csub">2.7&deg;C</span></td>
           <td>11.5 <span class="flow-pred">Pred</span></td>
           <td>3.155 <span class="flow-pred">Pred</span></td>
           <td>41.8</td>
@@ -277,7 +277,7 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Mon Feb 23</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">41.4<span class="csub">5.2&deg;C</span></td>
+          <td class="">41.5<span class="csub">5.3&deg;C</span></td>
           <td class="">39.7<span class="csub">4.3&deg;C</span></td>
           <td>12.2 <span class="flow-pred">Pred</span></td>
           <td>3.170 <span class="flow-pred">Pred</span></td>
@@ -288,7 +288,7 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Tue Feb 24</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">40.4<span class="csub">4.7&deg;C</span></td>
+          <td class="">40.5<span class="csub">4.7&deg;C</span></td>
           <td class="">38.5<span class="csub">3.6&deg;C</span></td>
           <td>12.4 <span class="flow-pred">Pred</span></td>
           <td>3.174 <span class="flow-pred">Pred</span></td>
@@ -344,15 +344,15 @@ const LB=['Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 
 const TI=DT.indexOf(TDY);
 const AC=23.0, AF=AC*9/5+32;
 
-const MF=[null,null,null,35.3586,36.2551,39.0497,41.4314,40.4039,39.5738,41.0177,40.9947], MC=[null,null,null,1.8659,2.3640,3.9165,5.2396,4.6688,4.2076,5.0099,4.9970];
-const UF=[35.7125,34.4340,34.0617,32.6920,33.8803,36.8273,39.6751,38.4617,36.9545,38.1888,38.0983], UC=[2.0625,1.3522,1.1454,0.3845,1.0446,2.6818,4.2639,3.5898,2.7525,3.4382,3.3880];
-const OF=[39.5769,38.3113,35.5016,35.3586,null,null,null,null,null,null,null],   OC=[4.2094,3.5063,1.9453,1.8659,null,null,null,null,null,null,null];
+const MF=[null,null,null,35.6741,36.4236,39.0989,41.4806,40.4531,39.6230,41.0177,40.9947], MC=[null,null,null,2.0412,2.4576,3.9438,5.2670,4.6962,4.2350,5.0099,4.9970];
+const UF=[35.7125,34.4340,34.0617,32.8010,34.0294,36.8571,39.7049,38.4915,36.9843,38.1888,38.0983], UC=[2.0625,1.3522,1.1454,0.4450,1.1275,2.6984,4.2805,3.6064,2.7691,3.4382,3.3880];
+const OF=[39.5769,38.3113,35.5016,35.6741,null,null,null,null,null,null,null],   OC=[4.2094,3.5063,1.9453,2.0412,null,null,null,null,null,null,null];
 
 /* Flow chart data */
 const FLB=['Fri Feb 13', 'Sat Feb 14', 'Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 'Sun Feb 22', 'Mon Feb 23', 'Tue Feb 24'];
 const FDT=['2026-02-13', '2026-02-14', '2026-02-15', '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20', '2026-02-21', '2026-02-22', '2026-02-23', '2026-02-24'];
-const FOQ=[10.1316,9.9059,10.5930,10.9831,11.1720,10.5243,8.4640,11.3822,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,11.3822,10.9800,11.5000,12.2100,12.3900];
-const FOG=[3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.0830,3.1525,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1525,3.1436,3.1550,3.1700,3.1737];
+const FOQ=[10.1316,9.9059,10.5930,10.9831,11.1720,10.5243,8.4640,11.3348,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,11.3348,10.9800,11.5000,12.2100,12.3900];
+const FOG=[3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.0830,3.1515,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1515,3.1436,3.1550,3.1700,3.1737];
 const FTI=FDT.indexOf(TDY);
 
 const MCL=['#94a3b8','#94a3b8','#94a3b8','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], UCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], OCL=['#0369a1','#0369a1','#0369a1','#0369a1','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8'];
