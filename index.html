@@ -28,9 +28,9 @@ body{background:var(--bg);color:var(--tx);font-family:var(--f);line-height:1.55}
 .ri span{color:rgba(255,255,255,.9);opacity:.9}
 
 .ab{border-radius:8px;padding:.8rem 1.3rem;margin:1.1rem auto 0;max-width:1280px;display:flex;align-items:center;gap:.65rem;font-weight:500;font-size:.88rem}
-.alert-active{background:#fef2f2;border:1px solid #fca5a5}
-.alert-active .adot{width:9px;height:9px;background:var(--rd);border-radius:50%;animation:bk 1.8s infinite}
-.alert-active .atx{color:var(--rd)}
+.alert-active{background:#b91c1c;border:2px solid #991b1b;padding:1.4rem 1.8rem;border-radius:10px}
+.alert-active .adot{width:12px;height:12px;background:#ffffff;border-radius:50%;animation:bk 1.2s infinite}
+.alert-active .atx{color:#ffffff;font-size:1.25rem;font-weight:700;letter-spacing:.01em}
 @keyframes bk{0%,100%{opacity:1}50%{opacity:.15}}
 .alert-ok{background:#f0fdf4;border:1px solid #86efac}
 .alert-ok .adot{width:9px;height:9px;background:var(--gn);border-radius:50%}
@@ -145,7 +145,7 @@ tr:hover td{background:#f0f5fa}
           <div class="wx-icon">&#x2601;</div>
           <div class="wx-cond">Cloudy</div>
           <div class="wx-temp">29&deg;F<span class="wx-c">-2&deg;C</span></div>
-          <div class="wx-det">RH 84% &middot; DP 25&deg;F</div>
+          <div class="wx-det">RH 81% &middot; DP 24&deg;F</div>
         </div>
         <div class="wx-card">
           <div class="wx-day">Sat</div>
@@ -212,8 +212,8 @@ tr:hover td{background:#f0f5fa}
           <td class="tsrc">Obs</td>
           <td class="">39.6<span class="csub">4.2&deg;C</span></td>
           <td class="">38.3<span class="csub">3.5&deg;C</span></td>
-          <td class="">35.6<span class="csub">2.0&deg;C</span></td>
-          <td>175.8</td>
+          <td class="">35.7<span class="csub">2.1&deg;C</span></td>
+          <td>11.2</td>
           <td>3.148</td>
           <td>32.6</td>
           <td>76</td>
@@ -223,8 +223,8 @@ tr:hover td{background:#f0f5fa}
           <td class="tsrc">Obs</td>
           <td class="">38.3<span class="csub">3.5&deg;C</span></td>
           <td class="">37.1<span class="csub">2.8&deg;C</span></td>
-          <td class="">34.4<span class="csub">1.3&deg;C</span></td>
-          <td>173.8</td>
+          <td class="">34.4<span class="csub">1.4&deg;C</span></td>
+          <td>10.5</td>
           <td>3.133</td>
           <td>30.3</td>
           <td>73</td>
@@ -234,8 +234,8 @@ tr:hover td{background:#f0f5fa}
           <td class="tsrc">Obs</td>
           <td class="">35.5<span class="csub">1.9&deg;C</span></td>
           <td class="">36.6<span class="csub">2.6&deg;C</span></td>
-          <td class="">34.0<span class="csub">1.1&deg;C</span></td>
-          <td>166.9</td>
+          <td class="">34.1<span class="csub">1.1&deg;C</span></td>
+          <td>8.5</td>
           <td>3.083</td>
           <td>30.5</td>
           <td>73</td>
@@ -243,22 +243,22 @@ tr:hover td{background:#f0f5fa}
         <tr class="today">
           <td class="tdate">Today</td>
           <td class="tsrc">Obs</td>
-          <td class="">35.8<span class="csub">2.1&deg;C</span></td>
-          <td class="">34.8<span class="csub">1.5&deg;C</span></td>
-          <td class="">32.8<span class="csub">0.4&deg;C</span></td>
-          <td>174.9</td>
-          <td>3.141</td>
+          <td class="">35.4<span class="csub">1.9&deg;C</span></td>
+          <td class="">34.7<span class="csub">1.5&deg;C</span></td>
+          <td class="">32.7<span class="csub">0.4&deg;C</span></td>
+          <td>11.4</td>
+          <td>3.153</td>
           <td>28.8</td>
-          <td>84</td>
+          <td>81</td>
         </tr>
         <tr class="forecast">
           <td class="tdate">Sat Feb 21</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">36.5<span class="csub">2.5&deg;C</span></td>
-          <td class="">34.1<span class="csub">1.2&deg;C</span></td>
-          <td>173.0 <span class="flow-pred">Pred</span></td>
-          <td>3.128 <span class="flow-pred">Pred</span></td>
+          <td class="">36.3<span class="csub">2.4&deg;C</span></td>
+          <td class="">33.9<span class="csub">1.0&deg;C</span></td>
+          <td>11.0 <span class="flow-pred">Pred</span></td>
+          <td>3.144 <span class="flow-pred">Pred</span></td>
           <td>34.6</td>
           <td>65</td>
         </tr>
@@ -266,10 +266,10 @@ tr:hover td{background:#f0f5fa}
           <td class="tdate">Sun Feb 22</td>
           <td class="tsrc">Fcst</td>
           <td class="">--</td>
-          <td class="">39.1<span class="csub">3.9&deg;C</span></td>
+          <td class="">39.0<span class="csub">3.9&deg;C</span></td>
           <td class="">36.8<span class="csub">2.7&deg;C</span></td>
-          <td>175.0 <span class="flow-pred">Pred</span></td>
-          <td>3.142 <span class="flow-pred">Pred</span></td>
+          <td>11.5 <span class="flow-pred">Pred</span></td>
+          <td>3.155 <span class="flow-pred">Pred</span></td>
           <td>41.8</td>
           <td>60</td>
         </tr>
@@ -279,8 +279,8 @@ tr:hover td{background:#f0f5fa}
           <td class="">--</td>
           <td class="">41.4<span class="csub">5.2&deg;C</span></td>
           <td class="">39.7<span class="csub">4.3&deg;C</span></td>
-          <td>177.5 <span class="flow-pred">Pred</span></td>
-          <td>3.160 <span class="flow-pred">Pred</span></td>
+          <td>12.2 <span class="flow-pred">Pred</span></td>
+          <td>3.170 <span class="flow-pred">Pred</span></td>
           <td>45.3</td>
           <td>72</td>
         </tr>
@@ -290,8 +290,8 @@ tr:hover td{background:#f0f5fa}
           <td class="">--</td>
           <td class="">40.4<span class="csub">4.7&deg;C</span></td>
           <td class="">38.5<span class="csub">3.6&deg;C</span></td>
-          <td>178.9 <span class="flow-pred">Pred</span></td>
-          <td>3.170 <span class="flow-pred">Pred</span></td>
+          <td>12.4 <span class="flow-pred">Pred</span></td>
+          <td>3.174 <span class="flow-pred">Pred</span></td>
           <td>40.5</td>
           <td>77</td>
         </tr>
@@ -301,8 +301,8 @@ tr:hover td{background:#f0f5fa}
           <td class="">--</td>
           <td class="">39.6<span class="csub">4.2&deg;C</span></td>
           <td class="">37.0<span class="csub">2.8&deg;C</span></td>
-          <td>178.7 <span class="flow-pred">Pred</span></td>
-          <td>3.168 <span class="flow-pred">Pred</span></td>
+          <td>12.2 <span class="flow-pred">Pred</span></td>
+          <td>3.170 <span class="flow-pred">Pred</span></td>
           <td>37.7</td>
           <td>69</td>
         </tr>
@@ -312,7 +312,7 @@ tr:hover td{background:#f0f5fa}
           <td class="">--</td>
           <td class="">41.0<span class="csub">5.0&deg;C</span></td>
           <td class="">38.2<span class="csub">3.4&deg;C</span></td>
-          <td>179.3 <span class="flow-pred">Pred</span></td>
+          <td>12.4 <span class="flow-pred">Pred</span></td>
           <td>3.173 <span class="flow-pred">Pred</span></td>
           <td>39.9</td>
           <td>68</td>
@@ -323,7 +323,7 @@ tr:hover td{background:#f0f5fa}
           <td class="">--</td>
           <td class="">41.0<span class="csub">5.0&deg;C</span></td>
           <td class="">38.1<span class="csub">3.4&deg;C</span></td>
-          <td>179.2 <span class="flow-pred">Pred</span></td>
+          <td>12.3 <span class="flow-pred">Pred</span></td>
           <td>3.172 <span class="flow-pred">Pred</span></td>
           <td>38.9</td>
           <td>70</td>
@@ -344,19 +344,19 @@ const LB=['Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 
 const TI=DT.indexOf(TDY);
 const AC=23.0, AF=AC*9/5+32;
 
-const MF=[38.3118,37.1296,36.6106,34.7657,36.5190,39.0631,41.4419,40.4074,39.5749,41.0179,40.9947], MC=[3.5065,2.8498,2.5614,1.5365,2.5105,3.9239,5.2455,4.6708,4.2083,5.0100,4.9970];
-const UF=[35.6208,34.3507,33.9796,32.8042,34.1444,36.8409,39.6858,38.4655,36.9561,38.1890,38.0983], UC=[2.0116,1.3059,1.0998,0.4468,1.1913,2.6894,4.2699,3.5919,2.7534,3.4383,3.3880];
-const OF=[39.5769,38.3113,35.5016,35.8160,null,null,null,null,null,null,null],   OC=[4.2094,3.5063,1.9453,2.1200,null,null,null,null,null,null,null];
+const MF=[null,null,null,35.3586,36.2551,39.0497,41.4314,40.4039,39.5738,41.0177,40.9947], MC=[null,null,null,1.8659,2.3640,3.9165,5.2396,4.6688,4.2076,5.0099,4.9970];
+const UF=[35.7125,34.4340,34.0617,32.6920,33.8803,36.8273,39.6751,38.4617,36.9545,38.1888,38.0983], UC=[2.0625,1.3522,1.1454,0.3845,1.0446,2.6818,4.2639,3.5898,2.7525,3.4382,3.3880];
+const OF=[39.5769,38.3113,35.5016,35.3586,null,null,null,null,null,null,null],   OC=[4.2094,3.5063,1.9453,1.8659,null,null,null,null,null,null,null];
 
 /* Flow chart data */
 const FLB=['Fri Feb 13', 'Sat Feb 14', 'Sun Feb 15', 'Mon Feb 16', 'Tue Feb 17', 'Wed Feb 18', 'Thu Feb 19', 'Fri Feb 20', 'Sat Feb 21', 'Sun Feb 22', 'Mon Feb 23', 'Tue Feb 24'];
 const FDT=['2026-02-13', '2026-02-14', '2026-02-15', '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20', '2026-02-21', '2026-02-22', '2026-02-23', '2026-02-24'];
-const FOQ=[172.5472,171.8147,174.0179,175.2347,175.8159,173.8011,166.8977,174.8517,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,174.8517,173.0300,175.0000,177.4800,178.8700];
-const FOG=[3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.0830,3.1410,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1410,3.1279,3.1420,3.1598,3.1697];
+const FOQ=[10.1316,9.9059,10.5930,10.9831,11.1720,10.5243,8.4640,11.3822,null,null,null,null],  FPQ=[null,null,null,null,null,null,null,11.3822,10.9800,11.5000,12.2100,12.3900];
+const FOG=[3.1244,3.1191,3.1350,3.1438,3.1479,3.1334,3.0830,3.1525,null,null,null,null], FPG=[null,null,null,null,null,null,null,3.1525,3.1436,3.1550,3.1700,3.1737];
 const FTI=FDT.indexOf(TDY);
 
-const MCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], UCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], OCL=['#0369a1','#0369a1','#0369a1','#0369a1','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8'];
-const MFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], UFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], OFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)'];
+const MCL=['#94a3b8','#94a3b8','#94a3b8','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], UCL=['#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1','#0369a1'], OCL=['#0369a1','#0369a1','#0369a1','#0369a1','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8','#94a3b8'];
+const MFL=['rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], UFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)'], OFL=['rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(3,105,161,0.2)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)','rgba(148,163,184,0.3)'];
 
 const CF={family:"'Source Sans 3'"};
 const MO={family:"'IBM Plex Mono'",size:10};
@@ -452,7 +452,7 @@ new Chart(document.getElementById('tempChart'),{
         pointRadius:7,pointHoverRadius:9,pointBackgroundColor:OFL,pointBorderColor:OCL,pointBorderWidth:2,
         tension:.25,fill:false,spanGaps:false,
         datalabels:{
-          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;return(i%2===0);},
+          display:c=>c.dataset.data[c.dataIndex]!==null,
           formatter:(v,c)=>{const cv=OC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:'#15803d',anchor:'end',align:'top',offset:5,
           font:{family:"'IBM Plex Mono'",size:10,weight:500},
@@ -464,7 +464,7 @@ new Chart(document.getElementById('tempChart'),{
         pointRadius:7,pointHoverRadius:9,pointBackgroundColor:MFL,pointBorderColor:MCL,pointBorderWidth:2,
         tension:.25,fill:false,
         datalabels:{
-          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;if(TI>=0&&i<TI)return(i%2===1);return true;},
+          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;if(i===TI)return false;return true;},
           formatter:(v,c)=>{const cv=MC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:c=>MCL[c.dataIndex],anchor:'end',align:'top',offset:5,
           font:{family:"'IBM Plex Mono'",size:10,weight:500},
@@ -476,7 +476,7 @@ new Chart(document.getElementById('tempChart'),{
         pointRadius:6,pointHoverRadius:8,pointBackgroundColor:UFL,pointBorderColor:UCL,pointBorderWidth:2,
         tension:.25,fill:false,
         datalabels:{
-          display:c=>{const i=c.dataIndex;if(c.dataset.data[i]===null)return false;if(TI>=0&&i<TI)return(i%2===1);return true;},
+          display:c=>c.dataset.data[c.dataIndex]!==null,
           formatter:(v,c)=>{const cv=UC[c.dataIndex];return cv!==null?cv.toFixed(1)+'\u00b0C':''},
           color:c=>UCL[c.dataIndex],anchor:'start',align:'bottom',offset:5,
           font:{family:"'IBM Plex Mono'",size:9,weight:500},
@@ -510,9 +510,9 @@ new Chart(document.getElementById('tempChart'),{
         },
       },
       yC:{
-        ...SD,position:'right',grid:{drawOnChartArea:false},
+        type:'linear',display:true,...SD,position:'right',grid:{drawOnChartArea:false},
         title:{display:true,text:'Temperature (\u00b0C)',color:'#6b7b8d',font:CF},
-        afterBuildTicks(ax){
+        afterDataLimits(ax){
           const yF=ax.chart.scales.y;
           if(yF){ax.min=(yF.min-32)*5/9;ax.max=(yF.max-32)*5/9}
         },
@@ -524,9 +524,10 @@ new Chart(document.getElementById('tempChart'),{
 });
 
 /* ========== FLOW / GAGE (7 obs + 4 pred) ========== */
-/* Stage-discharge conversion: Q = 10 * GH^2.5, so GH = (Q/10)^0.4 */
-const cfs2ft=q=>q>0?Math.pow(q/10,0.4):0;
-const ft2cfs=g=>g>0?10*Math.pow(g,2.5):0;
+/* Stage-discharge rating curve: Q = 59.255*GH^2 - 327.47*GH + 454.84 */
+const ft2cfs=g=>Math.max(59.255*g*g-327.47*g+454.84,0);
+/* Inverse via quadratic formula: GH = (327.47+sqrt(327.47^2-4*59.255*(454.84-Q)))/(2*59.255) */
+const cfs2ft=q=>{const a=59.255,b=-327.47,c=454.84-q,disc=b*b-4*a*c;return disc>=0?((-b+Math.sqrt(disc))/(2*a)):0;};
 new Chart(document.getElementById('flowChart'),{
   type:'line',
   data:{
@@ -575,9 +576,9 @@ new Chart(document.getElementById('flowChart'),{
     scales:{
       x:{...SD,ticks:{...SD.ticks,maxRotation:45}},
       yF:{...SD,position:'left',title:{display:true,text:'Flow (cfs)',color:'#6b7b8d',font:CF}},
-      yG:{...SD,position:'right',grid:{drawOnChartArea:false},
+      yG:{type:'linear',display:true,...SD,position:'right',grid:{drawOnChartArea:false},
         title:{display:true,text:'Gage Height (ft)',color:'#6b7b8d',font:CF},
-        afterBuildTicks(ax){
+        afterDataLimits(ax){
           const yF=ax.chart.scales.yF;
           if(yF){ax.min=cfs2ft(yF.min);ax.max=cfs2ft(yF.max)}
         },
